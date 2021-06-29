@@ -200,7 +200,7 @@ hr{
 }
 .boye{
   width:18rem;
-  margin-left: 20%;
+  margin-left: 10%;
   border-radius: 20px;
   box-shadow: 2px 2px 15px 7px black;
   z-index: 1;
@@ -261,7 +261,7 @@ animation-fill-mode: forwards;
 .icons{
   position: absolute;
   bottom:20%;
-  left:18%;
+  left:8%;
   z-index: 2;
 }
 .button-cv{
