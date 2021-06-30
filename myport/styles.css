@@ -5,9 +5,6 @@ body{
 .container-fluid{
     padding: 0;
 }
-.header{
-
-}
 .navbar-brand{
   font-family: 'Playfair Display', serif;
   font-weight: bold;
@@ -21,6 +18,8 @@ padding-left: 2px;
 padding-right: 2px;
 text-align: right;
 }
+
+
 .navbar-color{
   background-color:  rgba(85.5, 0, 21.6, 0.99) !important;
 }
@@ -68,9 +67,6 @@ animation-fill-mode: forwards;
    height: 660px;
    object-fit: cover;
     pointer-events: none;
-
-
-
 }
 .video-text{
   position: relative;
@@ -82,7 +78,7 @@ animation-fill-mode: forwards;
   left:35%;
   bottom: 50%;
   color: #E8F0F2;
-  font-size:2.5rem;
+  font-size:80%;
     text-align: center;
 
 }
@@ -90,7 +86,7 @@ animation-fill-mode: forwards;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   color: #E8F0F2;
-  font-size:7rem;
+  font-size:600%;
   text-align: center;
 }
 #mytext{
@@ -98,7 +94,6 @@ animation-fill-mode: forwards;
 }
 .type-writer{
     font-family: 'Source Sans Pro', sans-serif;
-
   font-weight: bolder;
   position:absolute;
   left:38%;
@@ -119,7 +114,21 @@ bottom: 25%;
 color: black;
 font-size:2rem;
   text-align: center;
-  border-color: rgba(85.5, 0, 21.6, 0.99);
+  background-color: transparent;
+  border-radius: 8px;
+  border:1px solid rgba(85.5, 0, 21.6, 0.99);
+}
+.bio-text{
+  color:white;
+}
+.bio-text:hover{
+  color:white;
+}
+.bot-link{
+  color: white;
+}
+.bot-link:hover{
+  color: white;
 }
 .bio:hover{
   color: white;
@@ -132,7 +141,7 @@ animation-fill-mode: forwards;
     transform: scale(1.0);
   }
   to{
-      transform: scale(1.1);
+      transform: scale(1.03);
   }
 }
 .bio-morning{
@@ -144,7 +153,9 @@ bottom: 25%;
 color: white;
 font-size:2rem;
   text-align: center;
-  border-color: #77ACF1;
+  background-color: transparent;
+  border-radius: 8px;
+  border:1px solid #77ACF1;
 }
 .bio-morning:hover{
   color: white;
@@ -159,14 +170,6 @@ animation-fill-mode: forwards;
   to{
       transform: scale(1.1);
   }
-}
-.bio-link{
-  color:white;
-  text-decoration: none;
-}
-.bio-link:hover{
-  color:white;
-  text-decoration: none;
 }
 
 .headings{
@@ -689,21 +692,21 @@ label{
 }
 .forms{
   padding-bottom: 0.7rem;
-  padding-right: 15rem;
+  width:90%;
   border-radius: 6px;
   border: 2px solid rgba(85.5, 0, 21.6, 0.99);
   outline: none;
 }
 .forms-morning{
   padding-bottom: 0.7rem;
-  padding-right: 15rem;
+  width:90%;
   border-radius: 6px;
   border: 2px solid #053742;;
   outline: none;
 }
 .texta{
   padding-bottom: 3rem;
-  padding-right: 15rem;
+  width:90%;
   border-radius: 6px;
   border: 2px solid rgba(85.5, 0, 21.6, 0.99);
   outline: none;
@@ -818,10 +821,10 @@ outline: none;
   }
 }
 @media (min-width: 768px) and (max-width: 991px){
-  /* .projects{
-    margin-right: 30px;
-    margin-left: 30px;
-  } */
+  .projects{
+    margin-right: 25%;
+    margin-left: 25%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px){
   /*
@@ -850,19 +853,26 @@ outline: none;
   .vid-txt{
     position:absolute;
     bottom:45%;
-    left:5px;
+    left:2%;
   }
   .type-writer{
     position:absolute;
-    left:5px;
+    left:2%;
     bottom: 30%;
   }
   .bio-morning,.bio{
 
   position:absolute;
-  left:20px;
+  left:4%;
   bottom: 15%;
+  }
+  .projects{
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .time{
 
+    text-align: left;
   }
 
 }
@@ -880,7 +890,7 @@ outline: none;
   .vid-txt{
     position:absolute;
     bottom:45%;
-    left:0;
+    left:4%;
   }
   .type-writer{
     position:absolute;
@@ -890,7 +900,7 @@ outline: none;
   .bio-morning{
 
   position:absolute;
-  left:0;
+  left:4%;
   bottom: 15%;
 
   }
@@ -901,14 +911,17 @@ outline: none;
   .bio{
 
   position:absolute;
-  left:0;
+  left:4%;
   bottom: 15%;
 
   }
 
 
   .projects{
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .time{
+    text-align: left;
   }
 }

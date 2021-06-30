@@ -14,7 +14,7 @@ if (hours >= 0 && hours <= 9) {
 }
 
 
-if (hours >=0&&hours<12) {
+if (hours >= 0 && hours < 12) {
   $("video").html('<source src="header3.mp4" type="video/mp4"></source>');
   $(".btn").removeClass("bio");
   $(".btn").addClass("bio-morning");
@@ -33,14 +33,16 @@ if (hours >=0&&hours<12) {
   const menuToggle = document.getElementById('navbarSupportedContent')
   const bsCollapse = new bootstrap.Collapse(menuToggle)
   navLinks.forEach((l) => {
-      l.addEventListener('click', () => { bsCollapse.toggle() })
+    l.addEventListener('click', () => {
+      bsCollapse.toggle()
+    })
   });
 
-$(".btn-cv").css("background-color","#053742");
+  $(".btn-cv").css("background-color", "#053742");
   $(".time-text").html("Good Morning From Boye");
 
-  $(".header").css("background-color","#39A2DB");
-  $("#about").css("background-color","#39A2DB");
+  $(".header").css("background-color", "#39A2DB");
+  $("#about").css("background-color", "#39A2DB");
   $(".mor").removeClass("btn-cv");
   $(".mor").addClass("btn-cv-morning");
   $("strong").removeClass("name");
@@ -61,17 +63,15 @@ $(".btn-cv").css("background-color","#053742");
   $(".fa").addClass("f-a-morning");
   $(".fas").removeClass("fs");
   $(".fas").addClass("fs-morning");
-  $(".proj").css("background-color","#39A2DB");
-  $(".cont").css("background-color","#39A2DB");
+  $(".proj").css("background-color", "#39A2DB");
+  $(".cont").css("background-color", "#39A2DB");
   $(".but").removeClass("btn-submit");
   $(".but").addClass("btn-submit-morning");
   $(".inp").removeClass("forms");
   $(".inp").addClass("forms-morning");
   $("textarea").removeClass("texta");
   $("textarea").addClass("texta-morning");
-}
-
-else if (hours >= 12 && hours < 18) {
+} else if (hours >= 12 && hours < 18) {
   $("video").html('<source src="header3.mp4" type="video/mp4"></source>');
   $(".btn").removeClass("bio");
   $(".btn").addClass("bio-morning");
@@ -93,41 +93,42 @@ else if (hours >= 12 && hours < 18) {
   const menuToggle = document.getElementById('navbarSupportedContent')
   const bsCollapse = new bootstrap.Collapse(menuToggle)
   navLinks.forEach((l) => {
-      l.addEventListener('click', () => { bsCollapse.toggle() })
+    l.addEventListener('click', () => {
+      bsCollapse.toggle()
+    })
   });
 
-$(".header").css("background-color","#39A2DB");
-$("#about").css("background-color","#39A2DB");
-$(".mor").removeClass("btn-cv");
-$(".mor").addClass("btn-cv-morning");
-$("strong").removeClass("name");
-$("strong").addClass("name-morning");
-$(".fab").removeClass("po");
-$(".fab").addClass("po-morning");
-$(".cor").removeClass("co");
-$(".cor").addClass("co-morning");
-$(".hrs").removeClass("hr-odd");
-$(".hrs").addClass("hr-odd-morning");
-$(".fl").removeClass("front");
-$(".fl").addClass("front-morning");
-$(".bm").removeClass("back-measure");
-$(".bm").addClass("back-measure-morning");
-$(".far").removeClass("fars");
-$(".far").addClass("fars-morning");
-$(".fa").removeClass("f-a");
-$(".fa").addClass("f-a-morning");
-$(".fas").removeClass("fs");
-$(".fas").addClass("fs-morning");
-$(".proj").css("background-color","#39A2DB");
-$(".cont").css("background-color","#39A2DB");
-$(".but").removeClass("btn-submit");
-$(".but").addClass("btn-submit-morning");
-$(".inp").removeClass("forms");
-$(".inp").addClass("forms-morning");
-$("textarea").removeClass("texta");
-$("textarea").addClass("texta-morning");
+  $(".header").css("background-color", "#39A2DB");
+  $("#about").css("background-color", "#39A2DB");
+  $(".mor").removeClass("btn-cv");
+  $(".mor").addClass("btn-cv-morning");
+  $("strong").removeClass("name");
+  $("strong").addClass("name-morning");
+  $(".fab").removeClass("po");
+  $(".fab").addClass("po-morning");
+  $(".cor").removeClass("co");
+  $(".cor").addClass("co-morning");
+  $(".hrs").removeClass("hr-odd");
+  $(".hrs").addClass("hr-odd-morning");
+  $(".fl").removeClass("front");
+  $(".fl").addClass("front-morning");
+  $(".bm").removeClass("back-measure");
+  $(".bm").addClass("back-measure-morning");
+  $(".far").removeClass("fars");
+  $(".far").addClass("fars-morning");
+  $(".fa").removeClass("f-a");
+  $(".fa").addClass("f-a-morning");
+  $(".fas").removeClass("fs");
+  $(".fas").addClass("fs-morning");
+  $(".proj").css("background-color", "#39A2DB");
+  $(".cont").css("background-color", "#39A2DB");
+  $(".but").removeClass("btn-submit");
+  $(".but").addClass("btn-submit-morning");
+  $(".inp").removeClass("forms");
+  $(".inp").addClass("forms-morning");
+  $("textarea").removeClass("texta");
+  $("textarea").addClass("texta-morning");
 }
-
 
 else if (hours >= 18 && hours < 24) {
   $("video").html('<source src="night.mp4" type="video/mp4"></source>');
@@ -139,16 +140,16 @@ else if (hours >= 18 && hours < 24) {
     'border-bottom': '2px solid black'
   });
   $(".time-text").html("Good Evening From Boye");
-  $(".header").css("background-color","#555555");
+  $(".header").css("background-color", "#555555");
 
 
-
-  const navLinks = document.querySelectorAll('.nav-item')
-  const menuToggle = document.getElementById('navbarSupportedContent')
-  const bsCollapse = new bootstrap.Collapse(menuToggle)
-  navLinks.forEach((l) => {
-      l.addEventListener('click', () => { bsCollapse.toggle() })
+  $(".navbar-toggler").click(function() {
+    $("nav").toggleClass("navbar-color");
+  })
+  $('.navbar-collapse a').click(function() {
+    $(".navbar-collapse").collapse('hide');
   });
+
 
   var nav = document.querySelector('nav');
   window.addEventListener('scroll', function(event) { // To listen for event
