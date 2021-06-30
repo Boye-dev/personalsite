@@ -260,8 +260,6 @@ animation-fill-mode: forwards;
   color:#EDEDED;
 }
 .icons{
-
-
 padding-bottom: 10%;
 }
 .button-cv{
@@ -660,6 +658,10 @@ box-shadow: 4px 2px 10px 3px black;
   left:0;
   bottom: 15%;
 
+  }
+  .bio-link{
+    position:absolute;
+    left:3%;
   }
   .bio{
 
