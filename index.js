@@ -11,13 +11,28 @@ if (hours >= 0 && hours <= 9) {
   }
 } else {
   $(".time").html(hours + " : " + min);
+  if (min >= 0 && min <= 9) {
+    $(".time").html(hours + " :0" + min);
+  } else {
+    $(".time").html( hours + " :" + min);
+  }
 }
 
 
-if (hours >= 0 && hours < 12) {
+if (hours >=0&&hours<12 ) {
   $("video").html('<source src="header3.mp4" type="video/mp4"></source>');
   $(".btn").removeClass("bio");
   $(".btn").addClass("bio-morning");
+
+  $(".navbar-toggler").on("click",function(){
+    $("nav").css("background-color","#053742");
+  });
+
+    $('.navbar-nav li a').on('click', function(){
+        if(!$( this ).hasClass('dropdown-toggle')){
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
 
   var nav = document.querySelector('nav');
   window.addEventListener('scroll', function(event) { // To listen for event
@@ -29,20 +44,14 @@ if (hours >= 0 && hours < 12) {
     }
   });
 
-  const navLinks = document.querySelectorAll('.nav-item')
-  const menuToggle = document.getElementById('navbarSupportedContent')
-  const bsCollapse = new bootstrap.Collapse(menuToggle)
-  navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
-      bsCollapse.toggle()
-    })
-  });
 
   $(".btn-cv").css("background-color", "#053742");
   $(".time-text").html("Good Morning From Boye");
 
   $(".header").css("background-color", "#39A2DB");
   $("#about").css("background-color", "#39A2DB");
+  $(".bio-loc").removeClass("bio");
+  $(".bio-loc").addClass("bio-morning");
   $(".mor").removeClass("btn-cv");
   $(".mor").addClass("btn-cv-morning");
   $("strong").removeClass("name");
@@ -71,7 +80,8 @@ if (hours >= 0 && hours < 12) {
   $(".inp").addClass("forms-morning");
   $("textarea").removeClass("texta");
   $("textarea").addClass("texta-morning");
-} else if (hours >= 12 && hours < 18) {
+}
+else if (hours >= 12 && hours < 18) {
   $("video").html('<source src="header3.mp4" type="video/mp4"></source>');
   $(".btn").removeClass("bio");
   $(".btn").addClass("bio-morning");
@@ -79,6 +89,15 @@ if (hours >= 0 && hours < 12) {
 
 
 
+  $(".navbar-toggler").on("click",function(){
+    $("nav").css("background-color","#053742");
+  });
+
+    $('.navbar-nav li a').on('click', function(){
+        if(!$( this ).hasClass('dropdown-toggle')){
+            $('.navbar-collapse').collapse('hide');
+        }
+    });
   var nav = document.querySelector('nav');
   window.addEventListener('scroll', function(event) { // To listen for event
     event.preventDefault();
@@ -89,17 +108,10 @@ if (hours >= 0 && hours < 12) {
     }
   });
 
-  const navLinks = document.querySelectorAll('.nav-item')
-  const menuToggle = document.getElementById('navbarSupportedContent')
-  const bsCollapse = new bootstrap.Collapse(menuToggle)
-  navLinks.forEach((l) => {
-    l.addEventListener('click', () => {
-      bsCollapse.toggle()
-    })
-  });
-
   $(".header").css("background-color", "#39A2DB");
   $("#about").css("background-color", "#39A2DB");
+  $(".bio-loc").removeClass("bio");
+  $(".bio-loc").addClass("bio-morning");
   $(".mor").removeClass("btn-cv");
   $(".mor").addClass("btn-cv-morning");
   $("strong").removeClass("name");
@@ -130,7 +142,7 @@ if (hours >= 0 && hours < 12) {
   $("textarea").addClass("texta-morning");
 }
 
-else if (hours >= 18 && hours < 24) {
+ else if (hours >= 17 && hours < 24) {
   $("video").html('<source src="night.mp4" type="video/mp4"></source>');
   $(".video-text").css("color", "white");
   $(".talk").removeClass("bot");
@@ -142,15 +154,15 @@ else if (hours >= 18 && hours < 24) {
   $(".time-text").html("Good Evening From Boye");
   $(".header").css("background-color", "#555555");
 
+$(".navbar-toggler").on("click",function(){
+  $("nav").css("background-color","rgba(85.5, 0, 21.6, 0.99)");
+});
 
-  $(".navbar-toggler").click(function() {
-    $("nav").toggleClass("navbar-color");
-  })
-  $('.navbar-collapse a').click(function() {
-    $(".navbar-collapse").collapse('hide');
+  $('.navbar-nav li a').on('click', function(){
+      if(!$( this ).hasClass('dropdown-toggle')){
+          $('.navbar-collapse').collapse('hide');
+      }
   });
-
-
   var nav = document.querySelector('nav');
   window.addEventListener('scroll', function(event) { // To listen for event
     event.preventDefault();
@@ -163,6 +175,13 @@ else if (hours >= 18 && hours < 24) {
 
 
 }
+
+//bot program
+
+
+
+
+
 
 
 var app = document.getElementById('mytext');
@@ -177,7 +196,7 @@ typewriter
   .typeString('<strong>Web Developer</strong> ')
   .pauseFor(200)
   .deleteChars(14)
-  .typeString('<strong>Phytoneer</strong>')
+  .typeString('<strong>Pythoneer</strong>')
   .pauseFor(1000)
   .deleteChars(10)
   .typeString('<strong>Data Scientist</strong>')
